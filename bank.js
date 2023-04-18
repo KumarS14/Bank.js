@@ -10,17 +10,13 @@ class Bank {
         let output = '\t date || credit || debit ||  balance\n';
         for (let i = 0; i < this.date.length; i++) {
          output += `          \t  ${this.date[ i]}   \t|| ${this.amount[i]}   || ${this.current[i]}\n`;
-}
-return output;
-
-
-
-
-
-
-
-
+       
+        }
+        return output
     }
+
+
+    
     deposit()
     {
        this.date.push(readline.question('enter date of your deposit'))
