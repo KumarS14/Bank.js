@@ -4,15 +4,16 @@ class Bank {
        this.date = []
        this.current = []
        this.depositOrWithdraw = []
-       this.bool = true
        this.question = ""
+       
+      
     }
     balance()
     {
         
         let output = '\t date || credit || debit ||  balance\n';
         for (let i = 0; i < this.date.length; i++) {
-         output += `          \t  ${this.date[ i]}   \t|| ${this.depositOrWithdraw[i]}   || ${this.newBalance[i]}\n`;
+         output += `          \t||   ${this.date[ i]}   \t|| ${this.depositOrWithdraw[i]}   || ${this.current[i]}\n`;
        
         }
         return output
@@ -20,20 +21,31 @@ class Bank {
 
 
     
-    deposit()
+    transaction()
     {
-        while (true) {
-       this.date.push(readline.question('enter date of your deposit : '))
-       this.depositOrWithdraw.push(readline.question('enter the amount you want to deposit in : '))
-       this.current.push(this.depositOrWithdraw)
-     
-     
-       this.question = (readline.question('would you like to create another transaction or if you are done please type end : ')) 
-       if (this.question == 'exit'){ break}
-       
-    }     
-        
+    while (true) {
+   this.date.push(readline.question('enter date of your deposit : '))
+   this.depositOrWithdraw.push(readline.question('enter the amount you want to deposit in : '))
+   
+   this.question = (readline.question('would you like to create another transaction or if you are done please type end : ')) 
+   if (this.question == 'exit'){ break}
+ 
+    }
+   // for (let i = 0; i < this.date.length; i++) {
+     //   this.current.push(this.depositOrWithdraw[0] + this.depositOrWithdraw[1])
+    //}
+    let balance = 0;
+    for (let i = 0; i < this.depositOrWithdraw.length; i++) {balance += parseInt(this.depositOrWithdraw[i]);
+ 
+  this.current.push(balance);
 
     }
-}
+  }
+
+  
+
+};
+
+
+
 module.exports = Bank;
