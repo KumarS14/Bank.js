@@ -21,14 +21,14 @@ class Bank {
     
   transaction(the_date,the_deposit_orWithdraw,the_question)
     {
-    while (true) {
+   // while (true) {
    this.date.push(the_date)
    this.depositOrWithdraw.push(the_deposit_orWithdraw)
    
    this.question = (the_question) 
-   if (this.question == 'exit'){ break}
+   //if (this.question == 'exit')
  
-    }
+    //}
    // for (let i = 0; i < this.date.length; i++) {
      //   this.current.push(this.depositOrWithdraw[0] + this.depositOrWithdraw[1])
     //}
@@ -38,7 +38,7 @@ class Bank {
   this.current.push(balance);
 
     }
-    return this.balance()
+   return this.balance()
   }
 
   
