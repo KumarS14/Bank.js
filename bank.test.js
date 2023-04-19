@@ -1,24 +1,11 @@
 
-import Bank from './bank'
-describe('bank',() => {
-    beforeEach(() => {
-        bank1 = new bank();
-      });
-    it('tests to see if module is returned',() =>
-    {
-        bank1 = new bank()
-        expect(bank1).toBe['Function Bank']
-    });
-    it('tests to see if balance returns correct format',() =>
-    {
-       const bank1 = new bank()
-       bank1.transaction()
-        expect(bank1.balance()).toEqual()
-    })
-   // it('tests to see if balance returns correct format',() =>
-    //{
-      // const bank1 = new bank()
-       //bank1.transaction()
-        //expect(bank1.balance()).toEqual()
-    //})
-});
+const Bank = require("./bank");
+
+describe("Bank", () => {
+  it('tests to see if module is called',() => {
+    bank1 = new Bank()
+    expect(bank1.balance()).toBe ( '     ||date || credit|| debit ||  balance\n')
+
+  })
+})  
+
