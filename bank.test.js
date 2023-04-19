@@ -6,13 +6,13 @@ describe("Bank", () => {
     bank1 = new Bank()
     expect(bank1.balance()).toBe ( '     ||date || credit|| debit ||  balance\n')
 
-  })
-  it('tests to see if file can be called',() => {
+  });
+  it('tests to see if file can return one transaction',() => {
     bank1 = new Bank()
-    bank1.transaction('12/03/2004','+1000','exit')
-    expect(bank1.balance()).toBe['||date || credit|| debit ||  balance'
-    ,'||12/03/2004    ||+1000  || 1000']
+    bank1.transaction('13/04/2005','+1000','exit')
+    expect(bank1.balance()).toEqual(expect.stringContaining('||12/03/2004    ||+1000  || 1000'));
 
-  })
+  });
+ 
 })  
 
