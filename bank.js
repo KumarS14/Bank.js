@@ -13,19 +13,19 @@ class Bank {
         
            let output = '     ||date || credit|| debit ||  balance\n';
         for (let i = 0; i < this.date.length; i++) {
-         output +=`   ||${this.date[ i]}    ||${this.depositOrWithdraw[i]}  || ${this.current[i]}\n`;
+         output +=`     ||${this.date[ i]}    ||${this.depositOrWithdraw[i]}  || ${this.current[i]}\n`;
        
         }  
          return output
     }
     
-  transaction()
+  transaction(the_date,the_deposit_orWithdraw,the_question)
     {
     while (true) {
-   this.date.push(readline.question('enter date of your deposit : '))
-   this.depositOrWithdraw.push(readline.question('enter the amount you want to deposit in : '))
+   this.date.push(the_date)
+   this.depositOrWithdraw.push(the_deposit_orWithdraw)
    
-   this.question = (readline.question('would you like to create another transaction or if you are done please type end : ')) 
+   this.question = (the_question) 
    if (this.question == 'exit'){ break}
  
     }
