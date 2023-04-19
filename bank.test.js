@@ -34,6 +34,23 @@ describe("Bank", () => {
     
     
   });
+  it('tests to see if file can return three transactions',() => {
+  
+    const bank1 = new Bank();
+    bank1.transaction('13/04/2005','+1000');
+    bank1.transaction('14/05/2006','-50');
+    bank1.transaction('14/05/2006','-50');
+    const expected = [
+      "||date || credit|| debit ||  balance",
+      "   ||13/04/2005    ||+1000  || 1000",
+      "   ||14/05/2006    ||-50  || 950",
+      "   ||14/05/2006    ||-50  || 900",
+    ];
+    expect(bank1.balance().split('\n')).toEqual(expected);
+  
+  
+  
+});
     
     
 
