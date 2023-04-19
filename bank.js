@@ -11,9 +11,9 @@ class Bank {
     balance()
     {
         
-        let output = '\t date || credit || debit ||  balance\n';
+        let output = '\t||date || credit|| debit ||  balance\n';
         for (let i = 0; i < this.date.length; i++) {
-         output += `          \t||   ${this.date[ i]}   \t|| ${this.depositOrWithdraw[i]}   || ${this.current[i]}\n`;
+         output += `          \t||   ${this.date[ i]}   \t||  ${this.depositOrWithdraw[i]}   || ${this.current[i]}\n`;
        
         }
         return output
