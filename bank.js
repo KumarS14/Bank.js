@@ -10,13 +10,12 @@ class Bank {
     }
     balance()
     {
-        
-           let output = '     ||date || credit|| debit ||  balance\n';
-        for (let i = 0; i < this.date.length; i++) {
-         output +=`     ||${this.date[ i]}    ||${this.depositOrWithdraw[i]}  || ${this.current[i]}\n`;
+      let output = '     ||date || credit|| debit ||  balance\n';
+      for (let i = 0; i < this.date.length; i++) {
+       output +=`   ||${this.date[ i]}    ||${this.depositOrWithdraw[i]}  || ${this.current[i]}\n`;
        
         }  
-         return output
+         return output.trim()
     }
     
   transaction(the_date,the_deposit_orWithdraw,the_question)
@@ -35,10 +34,11 @@ class Bank {
     let balance = 0;
     for (let i = 0; i < this.depositOrWithdraw.length; i++) {balance += parseInt(this.depositOrWithdraw[i]);
  
-  this.current.push(balance);
+  
 
     }
-   return this.balance()
+    this.current.push(balance);
+   
   }
 
   
