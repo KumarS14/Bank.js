@@ -4,7 +4,7 @@ class Bank {
        this.date = []
        this.current = []
        this.depositOrWithdraw = []
-       this.question = ""
+      
        
       
     }
@@ -24,7 +24,6 @@ class Bank {
    this.date.push(the_date)
    this.depositOrWithdraw.push(the_deposit_orWithdraw)
    
-   this.question = (the_question) 
    //if (this.question == 'exit')
  
     //}
