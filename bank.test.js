@@ -1,7 +1,9 @@
 
-const bank = require("./bank");
-
+import Bank from './bank'
 describe('bank',() => {
+    beforeEach(() => {
+        bank1 = new bank();
+      });
     it('tests to see if module is returned',() =>
     {
         bank1 = new bank()
@@ -13,4 +15,10 @@ describe('bank',() => {
        bank1.transaction()
         expect(bank1.balance()).toEqual()
     })
+   // it('tests to see if balance returns correct format',() =>
+    //{
+      // const bank1 = new bank()
+       //bank1.transaction()
+        //expect(bank1.balance()).toEqual()
+    //})
 });
